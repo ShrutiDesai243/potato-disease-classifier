@@ -1,0 +1,1 @@
+web: gunicorn potato_disease_class_proj.wsgi
