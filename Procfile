@@ -1,1 +1,1 @@
-web: gunicorn potato_disease_class_proj.wsgi
+web: gunicorn potato_disease_class_proj.wsgi:application --bind 0.0.0.0:$PORT
