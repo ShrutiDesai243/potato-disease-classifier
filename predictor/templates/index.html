@@ -2,39 +2,29 @@
 <html>
 <head>
     <title>Potato Disease Predictor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
-<h1>Upload Potato Leaf Image</h1>
+<div class="container">
+    <h1>Potato Disease Detector</h1>
+    <p>Upload a leaf image to detect disease</p>
 
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    
-    <input type="file" name="image" id="imageInput" required>
-    
-    <br><br>
-    
-    <!-- Image Preview -->
-    <img id="preview" src="" width="300" style="display:none;"/>
-    
-    <br><br>
-    
-    <button type="submit">Predict</button>
-</form>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <label class="upload-box">
+            <input type="file" name="image" id="imageInput" required>
+            <span>Click to upload image</span>
+        </label>
 
-<script>
-    const input = document.getElementById('imageInput');
-    const preview = document.getElementById('preview');
+        <img id="preview" />
 
-    input.addEventListener('change', function() {
-        const file = this.files[0];
+        <button type="submit">Predict</button>
+    </form>
+</div>
 
-        if (file) {
-            preview.style.display = "block";
-            preview.src = URL.createObjectURL(file);
-        }
-    });
-</script>
-
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

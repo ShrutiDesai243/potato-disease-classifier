@@ -12,8 +12,12 @@ MODEL_PATH = os.path.join(
     "models",
     "potato_model.keras"
 )
-
-model = load_model(MODEL_PATH)
+model = None
+def get_model():
+    global model
+    if model is None:
+        model = load_model(MODEL_PATH, compile=False)
+    return model
 
 # Class names (IMPORTANT: same order as training)
 class_names = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']
@@ -28,6 +32,7 @@ def preprocess_image(image):
 
 # Prediction function
 def predict_image(image):
+    model = get_model()
     img_array = preprocess_image(image)
     predictions = model.predict(img_array)
 

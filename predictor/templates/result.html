@@ -2,15 +2,20 @@
 <html>
 <head>
     <title>Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
+<div class="container">
     <h1>Prediction Result</h1>
 
-    <p><strong>Disease:</strong> {{ result }}</p>
-    <p><strong>Confidence:</strong> {{ confidence }}%</p>
+    <div class="result-box">
+        <p><strong>Disease:</strong> {{ result }}</p>
+    </div>
 
-    <a href="/">Try Another Image</a>
+    <a href="/" class="btn">Try Another Image</a>
+</div>
 
 </body>
 </html>
