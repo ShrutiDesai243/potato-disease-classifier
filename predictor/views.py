@@ -3,6 +3,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 import numpy as np
 import os
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -37,14 +38,16 @@ def predict_image(image):
 
 # Main view
 def home(request):
-    if request.method == "POST" and request.FILES.get("image"):
-        image = Image.open(request.FILES["image"])
+    try:
+        if request.method == "POST" and request.FILES.get("image"):
+            image = Image.open(request.FILES["image"])
 
-        result, confidence = predict_image(image)
+            result, confidence = predict_image(image)
 
-        return render(request, "result.html", {
-            "result": result,
-            "confidence": round(confidence * 100, 2)
-        })
+            return render(request, "result.html", {
+                "result": result
+            })
 
-    return render(request, "index.html")
+        return render(request, "index.html")
+    except Exception as e:
+        return HttpResponse(f"Error: {e}")
