@@ -1,66 +1,134 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f7f8;
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e6f4ea, #fdfcfb);
     margin: 0;
+    text-align: center;
 }
 
+/* Layout */
 .container {
-    margin-top: 80px;
+    padding: 40px 20px;
 }
 
-h1 {
-    color: #2c7a7b;
+/* Header */
+.header h1 {
+    color: #2f855a;
+    font-size: 36px;
 }
 
-.upload-box {
-    display: inline-block;
-    padding: 20px;
-    border: 2px dashed #2c7a7b;
-    cursor: pointer;
-    margin-top: 20px;
+.header p {
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Card */
+.card {
+    margin: 40px auto;
+    padding: 30px;
+    width: 350px;
     background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Form */
+.form-box {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+/* Upload Box */
+.upload-box {
+    border: 2px dashed #38a169;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #f0fff4;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    background: #e6fffa;
 }
 
 .upload-box input {
     display: none;
 }
 
+.upload-box i {
+    font-size: 24px;
+    color: #38a169;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* alert */
+.error-msg {
+    color: red;
+    font-size: 14px;
+}
+
+/* Preview */
+.preview-container {
+    text-align: center;
+}
+
 #preview {
-    margin-top: 20px;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
     display: none;
-    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 25px;
-    background: #2c7a7b;
-    color: white;
+/* Button */
+.btn {
+    padding: 12px;
     border: none;
+    border-radius: 10px;
+    background: #38a169;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    transition: 0.3s;
 }
 
-button:hover {
-    background: #225e5f;
+.btn:hover {
+    background: #2f855a;
+    transform: translateY(-2px);
+}
+
+
+/* result page */
+/* RESULT PAGE IMPROVEMENTS */
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* spacing between result + button */
 }
 
 .result-box {
-    margin-top: 20px;
-    padding: 20px;
-    background: white;
-    display: inline-block;
-    border-radius: 10px;
+    background: #f0fff4;
+    padding: 20px 25px;
+    border-radius: 12px;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #2c7a7b;
-    color: white;
+.result-text {
+    font-size: 18px;
+    color: #2f855a;
+}
+
+/* Remove underline from link */
+a {
     text-decoration: none;
-    border-radius: 5px;
+}
+
+/* Button spacing */
+.back-btn {
+    display: inline-block;
 }

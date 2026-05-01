@@ -10,7 +10,7 @@ from django.http import HttpResponse
 MODEL_PATH = os.path.join(
     os.path.dirname(__file__),
     "models",
-    "potato_model.keras"
+    "potato_model.h5"
 )
 model = None
 def get_model():

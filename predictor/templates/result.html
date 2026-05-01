@@ -1,20 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Result</title>
-    {% load static %}
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Font + Icons (same as index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Prediction Result</h1>
 
-    <div class="result-box">
-        <p><strong>Disease:</strong> {{ result }}</p>
+    <!-- Header -->
+    <div class="header">
+        <h1><i class="fa-solid fa-leaf"></i> Prediction Result</h1>
+        <p>Here’s what we found 🌿</p>
     </div>
 
-    <a href="/" class="btn">Try Another Image</a>
+    <!-- Card (same as index page) -->
+    <div class="card result-card">
+
+        <div class="result-box">
+            <p class="result-text">
+            
+                {{ result }}
+            </p>
+        </div>
+
+        <a href="/" class="btn back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Try Another Image
+        </a>
+
+    </div>
+
 </div>
 
 </body>
