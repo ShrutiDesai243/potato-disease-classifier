@@ -44,8 +44,9 @@ It combines a deep learning model with a simple and user-friendly web interface.
 - Outputs prediction with confidence score
 
 ---
-````md
+
 ## 📂 Project Structure
+````md
 potato-disease-project/
 │
 ├── app/
