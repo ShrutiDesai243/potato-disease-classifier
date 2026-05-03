@@ -44,7 +44,7 @@ It combines a deep learning model with a simple and user-friendly web interface.
 - Outputs prediction with confidence score
 
 ---
-
+````md
 ## 📂 Project Structure
 potato-disease-project/
 │
@@ -75,16 +75,16 @@ git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 
 ### 2. Create virtual environment
-
+```bash
 python -m venv env
 env\Scripts\activate   # Windows
 
 ### 3. Install dependencies
-
+```bash
 pip install -r requirements.txt
 
 ### 4. Run server
-
+```bash
 python manage.py runserver
 
 ### 5. Open in browser
