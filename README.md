@@ -74,7 +74,8 @@ potato-disease-project/
 
 ```bash
 git clone https://github.com/ShrutiDesai243/potato-disease-classifier.git
-cd potato-disease-classifier ```
+cd potato-disease-classifier
+```
 
 ### 2. Create virtual environment
 ```bash
