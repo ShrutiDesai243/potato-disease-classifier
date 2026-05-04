@@ -46,7 +46,7 @@ It combines a deep learning model with a simple and user-friendly web interface.
 ---
 
 ## 📂 Project Structure
-```text
+
 potato-disease-project/
 │
 ├── app/
