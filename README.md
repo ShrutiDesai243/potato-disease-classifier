@@ -64,6 +64,7 @@ potato-disease-project/
 ├── manage.py
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
@@ -79,16 +80,17 @@ cd potato-disease-classifier ```
 ```bash
 python -m venv env
 env\Scripts\activate   # Windows
-
+```
 ### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
-
+```
 ### 4. Run server
 ```bash
 python manage.py runserver
-
+```
 ### 5. Open in browser
+http://127.0.0.1:8000/
 
 ## 🌐 Live Demo
 Deployment in progress (working on improving stability due to model size)
@@ -96,10 +98,10 @@ Deployment in progress (working on improving stability due to model size)
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/landing.png)
 
 ### 🖼 Image Preview
-![Preview](screenshots/preview.png)
+![Preview](screenshots/image-uploaded.png)
 
 ### 📊 Prediction Result
 ![Result](screenshots/result.png)
